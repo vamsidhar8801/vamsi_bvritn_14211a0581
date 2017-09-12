@@ -174,6 +174,7 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student[] getNearBirthDate(Date date, int days) {
 		if(date==null)
 			throw new IllegalArgumentException();
+		
 		// Add your implementation here
 		return null;
 	}
@@ -192,7 +193,6 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
-		
 		// Add your implementation here
 		return null;
 	}
@@ -203,17 +203,19 @@ public class StudentGroup implements StudentArrayOperation {
 			throw new IllegalArgumentException();
 		else {
 			int i,count=0;
+			int ind=0;
 			for(i=0;i<students.length;i++) {
 				if(students[i]==student)
 				{
-					count++;	
+					count++;
+					ind=i;
 				}
 				if(count==0)
-					return students[i+1];
+					return student;
 			}
 		
 		// Add your implementation here
-			return students[i+1];
+			return students[ind+1];
 		}	
 	}
 	}
