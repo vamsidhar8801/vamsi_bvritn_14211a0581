@@ -121,6 +121,8 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeFromIndex(int index) {
+		if(index<0||index>=students.length)
+			throw new IllegalArgumentException();
 		// Add your implementation here
 	}
 
