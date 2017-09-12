@@ -87,13 +87,8 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void remove(int index) {
-		if(index<0||index>=students.length)
-			throw new IllegalArgumentException();
-		else {
-			for(int i=index;i<students.length;i++) {
-				students[i]=students[i+1];
-			}
-		}
+		
+		
 			
 		// Add your implementation here
 	}
