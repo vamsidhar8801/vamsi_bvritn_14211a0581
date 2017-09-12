@@ -100,7 +100,7 @@ public class StudentGroup implements StudentArrayOperation {
 			throw new IllegalArgumentException();
 		else {
 			Student[] a=new Student[students.length-1];
-			for(int i=index;i<students.length-1;i++)
+			for(int i=index;i<students.length;i++)
 				students[i]=students[i+1];
 			for(int i=0;i<a.length;i++)
 			{
@@ -131,6 +131,8 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeToIndex(int index) {
+		if(index<0||index>=students.length)
+			throw new IllegalArgumentException();
 		// Add your implementation here
 	}
 
