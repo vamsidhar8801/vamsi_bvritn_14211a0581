@@ -142,6 +142,8 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void removeToElement(Student student) {
+		if(student==null)
+			throw new IllegalArgumentException();
 		// Add your implementation here
 	}
 
