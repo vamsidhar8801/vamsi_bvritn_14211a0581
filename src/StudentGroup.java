@@ -34,7 +34,6 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public void setStudents(Student[] students) {
-		
 		// Add your implementation here
 		this.students=students;
 	}
@@ -125,14 +124,14 @@ public class StudentGroup implements StudentArrayOperation {
 	public void removeFromIndex(int index) {
 		if(students==null||index<0||index>=students.length)
 			throw new IllegalArgumentException();
-		else {
-			students[index]=students[index+1];
-		}
+		
 		// Add your implementation here
 	}
 
 	@Override
 	public void removeFromElement(Student student) {
+		if(student==null)
+			throw new IllegalArgumentException();
 		// Add your implementation here
 	}
 
@@ -157,6 +156,8 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getByBirthDate(Date date) {
+		if(date==null)
+			throw new IllegalArgumentException();
 		// Add your implementation here
 		return null;
 	}
@@ -164,11 +165,15 @@ public class StudentGroup implements StudentArrayOperation {
 	@Override
 	public Student[] getBetweenBirthDates(Date firstDate, Date lastDate) {
 		// Add your implementation here
+		if(firstDate==null)
+			throw new IllegalArgumentException();
 		return null;
 	}
 
 	@Override
 	public Student[] getNearBirthDate(Date date, int days) {
+		if(date==null)
+			throw new IllegalArgumentException();
 		// Add your implementation here
 		return null;
 	}
@@ -187,6 +192,7 @@ public class StudentGroup implements StudentArrayOperation {
 
 	@Override
 	public Student[] getStudentsWithMaxAvgMark() {
+		
 		// Add your implementation here
 		return null;
 	}
