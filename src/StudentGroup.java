@@ -99,9 +99,15 @@ public class StudentGroup implements StudentArrayOperation {
 		if(index<0||index>=students.length)
 			throw new IllegalArgumentException();
 		else {
-			for( int i=index;i<students.length;i++) {
+			Student[] a=new Student[students.length-1];
+			for(int i=index;i<students.length;i++)
 				students[i]=students[i+1];
+			for(int i=0;i<a.length;i++)
+			{
+				a[i]=students[i];
 			}
+			students=new Student[a.length];
+			students=a;
 		}
 			
 		// Add your implementation here
