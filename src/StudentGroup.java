@@ -125,6 +125,9 @@ public class StudentGroup implements StudentArrayOperation {
 	public void removeFromIndex(int index) {
 		if(students==null||index<0||index>=students.length)
 			throw new IllegalArgumentException();
+		else {
+			students[index]=students[index+1];
+		}
 		// Add your implementation here
 	}
 
