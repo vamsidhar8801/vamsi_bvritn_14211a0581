@@ -192,8 +192,20 @@ public class StudentGroup implements StudentArrayOperation {
 	public Student getNextStudent(Student student) {
 		if(student==null)
 			throw new IllegalArgumentException();
+		else {
+			int i,count=0;
+			for(i=0;i<students.length;i++) {
+				if(students[i]==student)
+				{
+					count++;	
+				}
+				if(count==0)
+					return null;
+			}
 		
 		// Add your implementation here
-		return null;
+			return students[i+1];
+		}	
 	}
-}
+	}
+
