@@ -200,7 +200,7 @@ public class StudentGroup implements StudentArrayOperation {
 					count++;	
 				}
 				if(count==0)
-					return students[i];
+					return students[i+1];
 			}
 		
 		// Add your implementation here
